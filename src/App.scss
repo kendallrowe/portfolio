@@ -1,3 +1,5 @@
+@import "styles/variables.scss";
+
 header {
   background-image: url("/images/sunset-background.jpg");
   background-attachment: fixed;
@@ -5,4 +7,24 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  position: relative;
 }
+
+
+
+.header-container {
+  position: absolute;
+  top: 30%;
+  right: 20%;
+  text-align: right;
+  
+  h1 {
+    font-size: 3.5rem;
+    color: $primary-orange;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+}
+
