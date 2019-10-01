@@ -1,6 +1,44 @@
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+nav,
+ul,
+li,
+a {
+  z-index: 1000;
+}
+
+nav {
+  width: 100%;
+}
 
 ul {
-  width: 100%;
+  width: $wrapper-width;
+  @include flexThis(flex-end, center, row);
+
+  li,
+  a {
+    transition: 0.3s;
+  }
+
+  li:hover {
+    transform: scale(1.2);
+  }
+  
+  a {
+    border-bottom: 1px solid transparent;
+    font-size: 1.4rem;
+    margin: 0 1rem;
+    
+  }
+
+  li:hover a{
+    color: $primary-orange;
+    border-bottom: 1px solid $primary-orange;
+  }
+
+  li:last-of-type a{
+    margin-right: 0;
+  }
 
 }

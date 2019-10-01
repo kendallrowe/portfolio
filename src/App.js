@@ -8,13 +8,15 @@ function App() {
   return (
     <div className="App">
       <header>
-      <Nav/>
+        <Nav/>
         <div className="header-container">
           <h1>Kendall Rowe</h1>
           <h2>Full Stack Developer</h2>
         </div>
-        <div className="contrast-container"/>
       </header>
+
+      <div id="about"><h2>About</h2></div>
+      <div id="projects"><h2>Projects</h2></div>
     </div>
   );
 }

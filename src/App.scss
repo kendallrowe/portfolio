@@ -8,24 +8,26 @@ header {
   background-size: cover;
   height: 100vh;
   position: relative;
+  padding-top: 3rem;
 }
 
-.contrast-container {
+header::after {
+  content: "";
   position: absolute;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: $black;
-  opacity: .1;
+  opacity: .15;
 }
 
 .header-container {
-  z-index: 1000;
   position: absolute;
   top: 30%;
   right: 20%;
   text-align: right;
+  z-index: 1000;
   
   h1 {
     font-size: 4rem;
