@@ -2,10 +2,13 @@ import React from 'react';
 
 import "./App.scss";
 
+import Nav from "./components/Nav";
+
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <header>
+      <Nav/>
         <div className="header-container">
           <h1>Kendall Rowe</h1>
           <h2>Full Stack Developer</h2>
