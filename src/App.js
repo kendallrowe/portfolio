@@ -10,6 +10,7 @@ function App() {
           <h1>Kendall Rowe</h1>
           <h2>Full Stack Developer</h2>
         </div>
+        <div className="contrast-container"/>
       </header>
     </div>
   );

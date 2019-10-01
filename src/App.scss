@@ -10,21 +10,30 @@ header {
   position: relative;
 }
 
-
+.contrast-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $black;
+  opacity: .1;
+}
 
 .header-container {
+  z-index: 1000;
   position: absolute;
   top: 30%;
   right: 20%;
   text-align: right;
   
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
     color: $primary-orange;
   }
 
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 }
 
