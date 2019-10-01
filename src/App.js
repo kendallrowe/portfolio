@@ -1,21 +1,15 @@
 import React from 'react';
 
+import "./App.scss";
+
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={"/images/sunset-background.jpg"} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+        <h1
         >
-          Learn React
-        </a>
+          Kendall Rowe
+        </h1>
       </header>
     </div>
   );
