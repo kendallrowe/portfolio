@@ -3,6 +3,7 @@ import React from 'react';
 import "./App.scss";
 
 import Nav from "./components/Nav";
+import About from "./components/About/index";
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
         </div>
       </header>
 
-      <div id="about"><h2>About</h2></div>
+      <About/>
       <div id="projects"><h2>Projects</h2></div>
     </div>
   );
