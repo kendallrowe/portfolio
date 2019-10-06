@@ -16,31 +16,33 @@ function About() {
 
   useEffect(() => {
     const scene = new THREE.Scene();
+    scene.background = new THREE.Color( 0xffffff );
     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000);
-    const renderer = new THREE.WebGLRenderer();
+    const renderer = new THREE.WebGLRenderer({ alpha: true});
     renderer.setSize( window.innerWidth, window.innerHeight );
     document.getElementById("about").appendChild( renderer.domElement );
 
     const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+    const loader = new THREE.TextureLoader();
 
-    var material = new THREE.MeshFaceMaterial([
+    const material = new THREE.MeshFaceMaterial([
       new THREE.MeshBasicMaterial({
-          color: 0x00ff00
+          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          color: 0xff0000
+          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          color: 0x0000ff,
+          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          color: 0xffff00
+          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          color: 0x00ffff
+          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          color: 0xff00ff
+          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
       })
     ]);
     
@@ -49,7 +51,7 @@ function About() {
     cube.rotation.y = Math.PI/4;
     scene.add( cube );
 
-    camera.position.z = 5;
+    camera.position.z = 2;
 
     let isDragging = false;
     let previousMousePosition = {
