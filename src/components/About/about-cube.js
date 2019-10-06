@@ -7,11 +7,6 @@ function toRadians(angle) {
 	return angle * (Math.PI / 180);
 }
 
-function toDegrees(angle) {
-	return angle * (180 / Math.PI);
-}
-
-
 function AboutCube() {
 
   useEffect(() => {
@@ -19,7 +14,6 @@ function AboutCube() {
     scene.background = new THREE.Color( 0xffffff );
     const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true});
-    // renderer.setSize( window.innerWidth, window.innerHeight );
     renderer.setSize( document.getElementById("three-js-container").offsetWidth,  document.getElementById("three-js-container").offsetHeight);
     document.getElementById("three-js-container").appendChild( renderer.domElement );
 
@@ -52,7 +46,7 @@ function AboutCube() {
     cube.rotation.y = Math.PI/4;
     scene.add( cube );
 
-    camera.position.z = 2;
+    camera.position.z = 1.5;
 
     let isDragging = false;
     let previousMousePosition = {
