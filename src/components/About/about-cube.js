@@ -12,7 +12,7 @@ function AboutCube() {
   useEffect(() => {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color( 0xffffff );
-    const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const camera = new THREE.PerspectiveCamera( 70, window.innerWidth / window.innerHeight, .01, 100000);
     const renderer = new THREE.WebGLRenderer({ alpha: true});
     renderer.setSize( document.getElementById("three-js-container").offsetWidth,  document.getElementById("three-js-container").offsetHeight);
     document.getElementById("three-js-container").appendChild( renderer.domElement );
@@ -22,22 +22,22 @@ function AboutCube() {
 
     const material = new THREE.MeshFaceMaterial([
       new THREE.MeshBasicMaterial({
-          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+          map: loader.load('images/felix.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+          map: loader.load('images/engagement.JPG')
       }),
       new THREE.MeshBasicMaterial({
-          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+          map: loader.load('images/headshot.png')
       }),
       new THREE.MeshBasicMaterial({
-          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+        map: loader.load('images/half.jpg')
       }),
       new THREE.MeshBasicMaterial({
-          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+        map: loader.load('images/felix_backpack.JPG')
       }),
       new THREE.MeshBasicMaterial({
-          map: loader.load('https://threejsfundamentals.org/threejs/resources/images/wall.jpg')
+          map: loader.load('images/hersh.jpg')
       })
     ]);
     
