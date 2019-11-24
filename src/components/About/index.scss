@@ -4,10 +4,10 @@
 #about {
   @include flexThis(space-between, center, row);
   width: $wrapper-width;
-  padding-top: 10vh;
+  padding: 10vh 0;
 }
 
-.aboutKendall {
-  width: 50%;
-  height: 500px;
+.about-kendall {
+  width: 55%;
+  height: $about-section-height;
 }

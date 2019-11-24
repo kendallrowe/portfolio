@@ -2,21 +2,17 @@ import React from 'react';
 
 import "./App.scss";
 
-import Nav from "./components/Nav";
+import Header from "./components/Header"
 import About from "./components/About/index";
+import Skills from "./components/Skills/index";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <Nav/>
-        <div className="header-container">
-          <h1>Kendall Rowe</h1>
-          <h2>Full Stack Developer</h2>
-        </div>
-      </header>
-
+      
+      <Header/>
       <About/>
+      <Skills/>
       <div id="projects"><h2>Projects</h2></div>
     </div>
   );

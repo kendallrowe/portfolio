@@ -1,4 +1,6 @@
+@import "../../styles/variables.scss";
+
 #three-js-container {
   width: 45%;
-  height: 500px;
+  height: $about-section-height;
 }
