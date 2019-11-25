@@ -6,8 +6,8 @@ import "./index.scss";
 function About() {
 
   return (
-    <section id="about" className="wow bounceInUp">
-      <div className="about-kendall wrapper">
+    <section id="about" className="wow fadeIn">
+      <div className="about-kendall">
         <h2>About Me</h2>
         <p>A full stack developer with a background in business - as you can see I very literally think outside the box.</p>
         <p>Having graduated from Ryerson University with a Bachelor's of Commerce majoring in Economics and Management Science, I began my career as an Associate within TD Securities.</p>
