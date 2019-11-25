@@ -4,9 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "./Badge.scss";
 
-function Badge({ iconType, onClick }) {
+const classNames = require('classnames');
+
+
+function Badge({ iconType, onClick, selected }) {
+  
+  const badgeClasses = classNames("skill-badge", {
+    "skill-badge--selected": selected,
+  });
+
   return (
-    <FontAwesomeIcon icon={iconType} onClick={onClick}/>
+    <FontAwesomeIcon className={badgeClasses} icon={iconType} onClick={onClick}/>
   );
 }
 
