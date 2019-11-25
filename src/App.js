@@ -8,12 +8,12 @@ import About from "./components/About/index";
 import Skills from "./components/Skills/index";
 
 function App() {
-  const { state, selectSkill } = useApplicationData();
+  const { state, selectSkill, renderComplete } = useApplicationData();
 
   return (
     <div className="App">
       <Header/>
-      <About/>
+      <About rendered={state.rendered} renderComplete={renderComplete}/>
       <Skills skills={state.skills} selectSkill={skill => selectSkill(skill)}/>
     </div>
   );

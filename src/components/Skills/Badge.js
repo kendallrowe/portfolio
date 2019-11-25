@@ -4,10 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 import "./Badge.scss";
 
-function Badge({ iconType }) {
-
+function Badge({ iconType, onClick }) {
   return (
-    <FontAwesomeIcon icon={iconType} />
+    <FontAwesomeIcon icon={iconType} onClick={onClick}/>
   );
 }
 
