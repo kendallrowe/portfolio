@@ -3,11 +3,18 @@
 .skill-badge {
   font-size: 5rem;
   color: $secondary-blue;
-
+  border: 1px solid transparent;
   transition: 0.3s;
 }
 
+.skill-badge:hover {
+  border: 1px solid $secondary-blue;
+}
+
 .skill-badge--selected {
-  color: $highlight-maroon !important;
   font-size: 6rem;
+}
+
+.skill-badge--all {
+  color: $highlight-maroon !important;
 }

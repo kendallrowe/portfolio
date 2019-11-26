@@ -2,7 +2,7 @@
 @import "../../styles/variables.scss";
 
 #skills {
-  @include flexThis(center, flex-start, column);
+  @include flexThis(center, center, column);
   width: $wrapper-width;
   margin-bottom: $section-padding;
   background-color: $primary-orange;
@@ -11,4 +11,16 @@
   -webkit-box-shadow: 0px 0px 42px -10px $secondary-box-shadow;
   -moz-box-shadow: 0px 0px 42px -10px $secondary-box-shadow;
   box-shadow: 0px 0px 42px -10px $secondary-box-shadow;
+  padding: 3rem 5rem;
+
+  h2 {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.skill-badge-container {
+  width: 100%;
+  @include flexThis(space-between, center, row);
+  min-height: 15rem;
 }

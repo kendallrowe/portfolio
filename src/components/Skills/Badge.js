@@ -7,10 +7,11 @@ import "./Badge.scss";
 const classNames = require('classnames');
 
 
-function Badge({ iconType, onClick, selected }) {
+function Badge({ iconType, onClick, selected, allSelected }) {
   
   const badgeClasses = classNames("skill-badge", {
     "skill-badge--selected": selected,
+    "skill-badge--all": allSelected
   });
 
   return (
