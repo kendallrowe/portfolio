@@ -27,14 +27,14 @@
 }
 
 .resume-link {
-  transition: height 300ms 300ms, opacity 300ms 0ms, color 300ms, 300ms;
+  transition: height 300ms 300ms, opacity 300ms 0ms, color 300ms, 300ms, padding 300ms, 300ms;
   opacity: 0.0;
   height: 0rem;
   margin: 0;
   width: 100%;
   font-size: 1.5rem;
   text-align: right;
-  padding: .2rem 0;
+  padding: 0;
   color: $highlight-maroon;
   border-top: 3px solid $highlight-maroon;
 }
@@ -45,7 +45,8 @@
 }
 
 .resume-link--visible {
-  transition: height 300ms 0ms, opacity 300ms 300ms, color  300ms, 300ms;
+  padding: .7rem 0;
+  transition: height 300ms 0ms, opacity 300ms 300ms, color  300ms, 300ms, padding 300ms, 300ms;
   opacity: 1;
   height: 1.5rem;
 }
