@@ -8,6 +8,7 @@
   @include flexThis(center, center, column);
   width: 7rem;
   margin: 0 .5rem;
+  cursor: pointer;
   
   svg {
     font-size: 5rem;
