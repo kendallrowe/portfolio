@@ -1,18 +1,47 @@
 @import "../../styles/variables.scss";
+@import "../../styles/mixins.scss";
 
 .skill-badge {
-  font-size: 5rem;
   color: $secondary-blue;
   border: 1px solid transparent;
   transition: 0.3s;
+  @include flexThis(center, center, column);
+  width: 7rem;
+  margin: 0 .5rem;
+  
+  svg {
+    font-size: 5rem;
+  }
+  
+  svg {
+    transition: 0.3s;
+  }
+
+}
+
+.skill-badge-caption {
+  transition: height 300ms 0ms, opacity 300ms 300ms, color  300ms, 300ms;
+  opacity: 1;
+  height: 1rem;
+}
+
+.skill-badge-caption--hide {
+  transition: height 300ms 300ms, opacity 300ms 0ms, color 300ms, 300ms;
+  opacity: 0.0;
+  height: 0rem;
 }
 
 .skill-badge:hover {
-  border: 1px solid $secondary-blue;
+  transform: scale(1.1);
 }
 
 .skill-badge--selected {
-  font-size: 6rem;
+  transform: scale(1.1);
+}
+
+.skill-badge--selected:hover {
+  transform: scale(1);
+
 }
 
 .skill-badge--all {
