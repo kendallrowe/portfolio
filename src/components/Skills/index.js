@@ -1,16 +1,24 @@
-import React from 'react';
+import React from "react";
 
-import { faGem } from '@fortawesome/free-solid-svg-icons'
-import { faReact, faPython, faNodeJs, faGitSquare, faJsSquare, faHtml5, faCss3Alt, faNode } from '@fortawesome/free-brands-svg-icons'
+import ProgressBar from "react-bootstrap/ProgressBar";
+
+import { faGem } from "@fortawesome/free-solid-svg-icons"
+import { faReact, faPython, faNodeJs, faGitSquare, faJsSquare, faHtml5, faCss3Alt, faNode } from "@fortawesome/free-brands-svg-icons"
 
 import "./index.scss";
 import Badge from "./Badge";
 
-const classNames = require('classnames');
+const classNames = require("classnames");
 
 function Skills({ skills, selectSkill }) {
 
-  const allSelected = skills.length === 8;
+  const numberOfSkills = 8
+
+  const allSelected = skills.length === numberOfSkills;
+
+  const percentSelected = Math.round(skills.length / 8 * 100);
+
+  const progressStyle = allSelected ? "success" : "info";
 
   const resumeClasses = classNames("resume-link", {
     "resume-link--visible": allSelected
@@ -70,6 +78,9 @@ function Skills({ skills, selectSkill }) {
           onClick={e => selectSkill("Node")}
           label="Node"
           selected={skills.indexOf("Node") !== -1}/>
+      </div>
+      <div id="progress-container">
+        <ProgressBar variant={progressStyle} now={percentSelected} />
       </div>
       <a className={resumeClasses} href="#resume">Resume</a>
     </section>

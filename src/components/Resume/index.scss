@@ -1,0 +1,8 @@
+@import "../../styles/mixins.scss";
+@import "../../styles/variables.scss";
+
+#resume {
+  @include flexThis(space-between, center, column);
+  width: $wrapper-width;
+  padding: $section-padding 0;
+}

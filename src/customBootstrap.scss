@@ -1,0 +1,8 @@
+@import "./styles/variables.scss";
+
+$theme-colors: (
+  "success": $highlight-maroon,
+  "info": $secondary-blue
+);
+  
+@import "~bootstrap/scss/bootstrap";

@@ -15,38 +15,37 @@
 
   h2 {
     width: 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 1.3rem;
     font-size: 1.8rem;
   }
-}
+};
+
+#progress-container {
+  z-index: 999;
+  width: 100%;
+};
 
 .skill-badge-container {
   width: 100%;
   @include flexThis(space-between, center, row);
   min-height: 9rem;
-}
+};
 
 .resume-link {
-  transition: height 300ms 300ms, opacity 300ms 0ms, color 300ms, 300ms, padding 300ms, 300ms;
-  opacity: 0.0;
-  height: 0rem;
-  margin: 0;
+  transition: 300ms;
+  height: 1.5rem;
   width: 100%;
   font-size: 1.5rem;
   text-align: right;
-  padding: 0;
   color: $highlight-maroon;
-  border-top: 3px solid $highlight-maroon;
-}
+  padding: .7rem 0;
+  visibility: hidden;
+};
 
 .resume-link:hover {
   color: $secondary-blue;
-  border-top: 3px solid $secondary-blue;
-}
+};
 
 .resume-link--visible {
-  padding: .7rem 0;
-  transition: height 300ms 0ms, opacity 300ms 300ms, color  300ms, 300ms, padding 300ms, 300ms;
-  opacity: 1;
-  height: 1.5rem;
-}
+  visibility: visible;
+};

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import AboutCube from "./about-cube";
 
 import "./index.scss";

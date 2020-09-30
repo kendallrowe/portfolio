@@ -1,11 +1,10 @@
-import React from 'react';
+import React from "react";
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 import "./Badge.scss";
 
-const classNames = require('classnames');
-
+const classNames = require("classnames");
 
 function Badge({ iconType, onClick, selected, allSelected, label }) {
   
