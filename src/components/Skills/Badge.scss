@@ -48,3 +48,41 @@
 .skill-badge--all {
   color: $highlight-maroon !important;
 }
+
+$shake-distance: 10px;
+
+.horizontal-shake {
+  -webkit-animation: horizontal-shake-animation 5s infinite; /* Safari 4+ */
+  -moz-animation:    horizontal-shake-animation 5s infinite; /* Fx 5+ */
+  -o-animation:      horizontal-shake-animation 5s infinite; /* Opera 12+ */
+  animation:         horizontal-shake-animation 5s infinite; /* IE 10+, Fx 29+ */
+}
+
+@-webkit-keyframes horizontal-shake-animation {
+  0%   { transform: translateX($shake-distance) }
+  20%  { transform: translateX(-$shake-distance) }
+  40%  { transform: translateX($shake-distance) }
+  60%  { transform: translateX(-$shake-distance) }
+  70% { transform: translateX(0)}
+};
+@-moz-keyframes horizontal-shake-animation {
+  0%   { transform: translateX($shake-distance) }
+  20%  { transform: translateX(-$shake-distance) }
+  40%  { transform: translateX($shake-distance) }
+  60%  { transform: translateX(-$shake-distance) }
+  70% { transform: translateX(0)}
+};
+@-o-keyframes horizontal-shake-animation {
+  0%   { transform: translateX($shake-distance) }
+  20%  { transform: translateX(-$shake-distance) }
+  40%  { transform: translateX($shake-distance) }
+  60%  { transform: translateX(-$shake-distance) }
+  70% { transform: translateX(0)}
+};
+@keyframes horizontal-shake-animation {
+  0%   { transform: translateX($shake-distance) }
+  20%  { transform: translateX(-$shake-distance) }
+  40%  { transform: translateX($shake-distance) }
+  60%  { transform: translateX(-$shake-distance) }
+  70% { transform: translateX(0)}
+};

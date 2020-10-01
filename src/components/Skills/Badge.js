@@ -6,11 +6,16 @@ import "./Badge.scss";
 
 const classNames = require("classnames");
 
-function Badge({ iconType, onClick, selected, allSelected, label }) {
+function Badge({ iconType, onClick, selected, allSelected, label, evenIndex }) {
   
   const badgeClasses = classNames("skill-badge", {
     "skill-badge--selected": selected,
     "skill-badge--all": allSelected
+  });
+  
+  const iconAnimationClass = classNames({
+    "horizontal-shake": evenIndex && !selected,
+    "vertical-bounce": !evenIndex && !selected
   });
 
   const captionClasses = classNames("skill-badge-caption", {
@@ -19,7 +24,7 @@ function Badge({ iconType, onClick, selected, allSelected, label }) {
 
   return (
     <article className={badgeClasses} onClick={onClick}>
-      <FontAwesomeIcon icon={iconType} />
+      <FontAwesomeIcon className={iconAnimationClass} icon={iconType} />
       <p className={captionClasses}>{label}</p>
     </article>
   );
